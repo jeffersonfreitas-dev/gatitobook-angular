@@ -13,3 +13,8 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.css"
             ],
+
+#Criando o modulo home
+- ng generate module home --routing
+#Criando o componente home
+- ng generate component home
