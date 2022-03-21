@@ -1,0 +1,15 @@
+#Gerar o projeto
+- ng new gatitobook --strict
+
+#Instalar bibliotecas
+- npm i bootstrap
+- npm i font-awesome
+
+#Configurar o uso do Bootstrap Global no projeto
+- abrir arquivo angular.json
+- adicionar o caminho completo do bootstrap e font-awesome em node_modules no array "styles" no angular.json
+            "styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
+            ],
