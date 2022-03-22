@@ -18,3 +18,29 @@
 - ng generate module home --routing
 #Criando o componente home
 - ng generate component home
+
+#Exportar um componente
+Deverá adicionar o componente no module do mesmo ex: home.modlue.ts
+    @NgModule({
+      declarations: [HomeComponent],
+      imports: [
+        CommonModule,
+        HomeRoutingModule
+      ],
+      exports: [HomeComponent]
+    })
+Após a inclusão no module do componente (home.module.ts), o mesmo deve ser importado no module principal (app.module.ts). Após a importação, o componente estará disponivel para ser referenciado no index.HomeRoutingModule
+
+#Comando para rodar o projeto
+- ng serve --o
+
+#Organizar rotatas
+-No lazy loading a importação não é feita no module
+-Incluir as rotas no arquivo routing.modules.ts dos componentes.
+-Segue a configuração da rota padrão do arquivo app-routing.module.ts que adiciona, na rota, o home.module.ts
+      const routes: Routes = [
+        {path:'', pathMatch:'full', redirectTo: 'home'},
+        {path:'home', loadChildren: () => import('./home/home.module').then((module) => module.HomeModule)}
+      ];
+
+
