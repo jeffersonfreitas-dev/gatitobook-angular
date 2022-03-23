@@ -43,4 +43,11 @@ Após a inclusão no module do componente (home.module.ts), o mesmo deve ser imp
         {path:'home', loadChildren: () => import('./home/home.module').then((module) => module.HomeModule)}
       ];
 
+#Criação de somente modulos
+-ng generate module nomemodulo
+
+#Criação de um serviço
+-ng generate service nomemodulo/nomeservico
+
+
 
