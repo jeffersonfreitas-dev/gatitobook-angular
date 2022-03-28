@@ -49,5 +49,8 @@ Após a inclusão no module do componente (home.module.ts), o mesmo deve ser imp
 #Criação de um serviço
 -ng generate service nomemodulo/nomeservico
 
+#Criar uma interface Typescript Model
+-ng generate interface pasta/nomeinterface
+
 
 
