@@ -29,13 +29,15 @@
       mensagem="Usuário deve ter letras minusculas">
     </app-mensagem>
     <app-mensagem *ngIf="novoUsuarioForm.get('userName')?.errors?.usuarioExistente" mensagem="Usuário já existe">
-
     </app-mensagem>
   </div>
 
   <div class="form-group">
     <input type="password" class="form-control" placeholder="Senha" formControlName="password"/>
+    <app-mensagem *ngIf="novoUsuarioForm.errors?.senhaIgualUsuario" mensagem="Usuário e senha devem ser diferentes">
+    </app-mensagem>
   </div>
+
 
   <button class="btn btn-primary btn-block">
       Cadastro
